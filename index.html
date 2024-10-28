@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '415473451159200');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=415473451159200&ev=PageView&noscript=1"
+    /></noscript>
+    <title>Testing Environment 4 Learning</title>
+</head>
+<body>
+    <h1>Test Environment 4 Learning</h1>
+    
+    <!-- Test Buttons and Form -->
+    <div style="margin: 20px;">
+        <button onclick="fbq('track', 'ViewContent', {content_name: 'Sample Product', content_type: 'product'})">
+            Test ViewContent Event
+        </button>
+
+        <button onclick="fbq('track', 'AddToCart', {
+            content_name: 'Sample Product',
+            content_type: 'product',
+            content_ids: ['123'],
+            value: 49.99,
+            currency: 'USD'
+        })">
+            Test AddToCart Event
+        </button>
+
+        <form onsubmit="event.preventDefault(); fbq('track', 'Purchase', {
+            value: 99.99,
+            currency: 'USD',
+            content_ids: ['123'],
+            content_type: 'product'
+        })">
+            <h3>Test Purchase Form</h3>
+            <input type="text" placeholder="Name" /><br><br>
+            <input type="email" placeholder="Email" /><br><br>
+            <button type="submit">Complete Purchase ($99.99)</button>
+        </form>
+
+        <!-- Custom Event Example -->
+        <button onclick="fbq('trackCustom', 'ShareDiscount', {
+            promotion: 'share_discount_10%',
+            discount_value: 10,
+            currency: 'USD'
+        })">
+            Test Custom Event (Share Discount)
+        </button>
+
+        <button onclick="fbq('trackCustom', 'VideoTutorialStart', {
+            tutorial_name: 'Getting Started',
+            duration: '5:30',
+            category: 'Beginners'
+        })">
+            Test Custom Event (Video Tutorial)
+        </button>
+    </div>
+
+</body>
+</html>
