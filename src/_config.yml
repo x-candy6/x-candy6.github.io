@@ -37,7 +37,9 @@ collections:
     output: true
   blog:
     output: true
-
+domain: x-candy6.github.io       # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
+url: https://x-candy6.github.io  # the base hostname and protocol for your site, e.g. http://example.com
+baseurl: /src/      # place folder name if the site is served in a subfolder
 
 
 ## Build settings
